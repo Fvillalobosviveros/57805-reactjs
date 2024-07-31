@@ -1,12 +1,16 @@
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import { NavBar } from "./Components/NavBar";
 import { ItemListContainer } from "./Components/ItemListContainer"; 
 
 function App() {
   return (
-  <><>
-      <NavBar />
-    </><ItemListContainer greeting= "hola"/></>
-
+  <><BrowserRouter />
+  <NavBar />
+  <Routes>
+    <Route path="/" element={<ItemListContainer/>} />
+  <ItemListContainer greeting="hola" />
+  </Routes>
+  <BrowserRouter /></>
   );
 
   
